@@ -79,11 +79,12 @@ function rbge_repo_embed_save($post_id){
     error_log( "Got it going" );
     
     global $post;
+    
     $pattern = get_shortcode_regex();
     error_log($pattern);
 
     // act if one of our short codes is in the post
-    if (preg_match_all( '/'. $pattern .'/s', $post->post_content, $matches )
+    if ($post && preg_match_all( '/'. $pattern .'/s', $post->post_content, $matches )
         && array_key_exists( 2, $matches )
         && in_array( 'rbge_repo', $matches[2] ) ){
             
