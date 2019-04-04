@@ -51,7 +51,7 @@ function rbge_repo_get_uri_for_atts($atts){
     
     // return "http://repo.rbge.org.uk/service/item/php/$key";
     // fixme to real server
-    return "http://repo.rbge.org.uk/service/item/php/catalogue_number/$key"; 
+    return "https://repo.rbge.org.uk/service/item/php/catalogue_number/$key"; 
     
 }
 
