@@ -143,7 +143,7 @@
             && isset($doc->storage_location_path)
         ){
             // fixme 
-            $base_uri = 'http://repo.rbge.org.uk/image_server.jpg?path='. urlencode($doc->storage_location_path) .'&kind=';
+            $base_uri = 'https://repo.rbge.org.uk/image_server.jpg?path='. urlencode($doc->storage_location_path) .'&kind=';
             $thumb_uri = $base_uri . '75-square';
             $large_uri = $base_uri . '1000';
             render_image($out, $thumb_uri, $large_uri, $doc->title[0]);
