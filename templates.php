@@ -47,7 +47,7 @@
         
         //echo '<pre style="float:both;" >' . print_r($data, true) . "</pre>";
         $out .= '<div class="rbge-repo-linkout">';
-        $out .= '<a href="http://data.rbge.org.uk/living/'. $data->catalogue_number .'">See full details in the Herbarium Catalogue &gt;&gt;</a>';
+        $out .= '<a href="http://data.rbge.org.uk/living/'. $data->catalogue_number .'">See full details in the Living Collections Catalogue &gt;&gt;</a>';
         $out .= '</div>';
         
         
@@ -143,7 +143,7 @@
             && isset($doc->storage_location_path)
         ){
             // fixme 
-            $base_uri = 'https://repo.rbge.org.uk/image_server.jpg?path='. urlencode($doc->storage_location_path) .'&kind=';
+            $base_uri = 'https	://repo.rbge.org.uk/image_server.jpg?path='. urlencode($doc->storage_location_path) .'&kind=';
             $thumb_uri = $base_uri . '75-square';
             $large_uri = $base_uri . '1000';
             render_image($out, $thumb_uri, $large_uri, $doc->title[0]);
